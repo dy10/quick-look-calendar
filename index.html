@@ -6,6 +6,37 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
+        <div style="width: 45%;">
+            <form action="https://chat.openai.com?hints=search&ref=ext" method="get">
+                <input type="text" id="chatgptQuery" name="q" placeholder="Ask ChatGPT..." style="width: 80%; padding: 8px;" autofocus>
+            </form>
+        </div>
+        <div style="width: 45%;">
+            <form action="https://www.google.com/search" method="get" target="_blank">
+                <input type="text" name="q" placeholder="Search Google..." style="width: 80%; padding: 8px;">
+            </form>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: space-around; margin-top: 20px; margin-left: 20%; margin-right: 20%;">
+        <div style="text-align: center;">
+            <div id="indiaClock" class="clock"></div>
+            <h4>India</h4>
+        </div>
+        <div style="text-align: center;">
+            <div id="usEstClock" class="clock"></div>
+            <h4>New York</h4>
+
+        </div>
+        <div style="text-align: center;">
+            <div id="usPstClock" class="clock"></div>
+            <h4>California</h4>
+        </div>
+    </div>
+
+    <hr>
+
     <div style="text-align: center;">
         <button id="prevBtn">←</button>
         <button id="nextBtn">→</button>
@@ -30,22 +61,6 @@
         </div>
     </div>
 </div>
-
-        <div style="display: flex; justify-content: space-around; margin-top: 20px; margin-left: 20%; margin-right: 20%;">
-            <div style="text-align: center;">
-                <div id="indiaClock" class="clock"></div>                
-                <h4>India</h4>
-            </div>
-            <div style="text-align: center;">
-                <div id="usEstClock" class="clock"></div>                
-                <h4>New York</h4>
-
-            </div>
-            <div style="text-align: center;">
-                <div id="usPstClock" class="clock"></div>                
-                <h4>California</h4>
-            </div>
-        </div>
 
 <script src="clocks.js"></script>
 <script src="bookmark.js"></script>
